@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery/jquery-3.5.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                   b = $(".hesob").val();
+                   c = $(".hesoc").val();
+                   str="";
+                   if(b==0)
+                       if(c==0)
+                           str+="Phương trình vô số nghiệm";
+                       else
+                           str+="Phương trình vô nghiệm"
+                   else{
+                       x= -c/b; 
+                       str+="Phương trình có nghiệm x="+x;
+                   }
+                   $("div").html(str);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form method="get" action="#">
+            b:<input type="number" class="hesob"></input><br>
+            c:<input type="number" class="hesoc"></input><br>
+            <button> Giải </button>
+        </form>
+        <div>Kết quả:</div>
+    </body>
+</html>
